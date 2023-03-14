@@ -2,9 +2,6 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/qiaoooo/personal_blog">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Personal Blog Website</h3>
 
@@ -25,7 +22,7 @@ This project is a course project for Udacity Front End Web Developer Nanodegree 
 
 ## Getting Started
 
-Access using []
+Access using <a href='https://qiaoooo.github.io/personal_blog/'>this link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
