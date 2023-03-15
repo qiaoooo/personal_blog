@@ -13,31 +13,43 @@
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="./css/index.css" />
-        <link rel="stylesheet" href="./css/blog.css" />
-        <link rel="stylesheet" href="./css/subscribe.css" />
+        <link rel="stylesheet" href="../css/index.css" />
 
     </head>
 
     <body>
         <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                <a href="./index.html" class="navbar-item"> Home </a>
-                <a href="./blog.html" class="navbar-item"> Blogs </a>
-                </div>
-
-                <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                    <a href="./subscribe.html" class="button is-primary">
-                        <strong>Subscribe</strong>
-                    </a>
-                    </div>
-                </div>
-                </div>
+            <div class="navbar-brand">
+              <a
+                role="button"
+                class="navbar-burger"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="navbarBasicExample"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
             </div>
-        </nav>
+      
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a href="../index.html" class="navbar-item"> Home </a>
+                <a href="./blog.html" class="navbar-item"> Blogs </a>
+              </div>
+      
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a href="./subscribe.html" class="button is-primary">
+                      <strong>Subscribe</strong>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
 
 
 
@@ -50,7 +62,7 @@
                     <a href="./blogpost.html">
                         <div class="img">
                             <figure>
-                                <img src="images/post-two.jpg" alt="blog-two">
+                                <img src="../images/post-two.jpg" alt="blog-two">
                                 <figcaption>Screenshot of the App</figcaption>
                             </figure>
                             <div class="blog-date">14 Mar,23</div>
@@ -68,7 +80,7 @@
                     <a href="./blogpost.html">
                         <div class="img">
                             <figure>
-                                <img src="images/post-two.jpg" alt="blog-two">
+                                <img src="../images/post-two.jpg" alt="blog-two">
                                 <figcaption>Lorem ipsum dolor sit, amet</figcaption>
                             </figure>
                             <div class="blog-date">16 Jan,23</div>
@@ -95,6 +107,30 @@
             <span>&copy; Qiao 2023</span>
             </div>
         </footer>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              // Get all "navbar-burger" elements
+              const $navbarBurgers = Array.prototype.slice.call(
+                document.querySelectorAll(".navbar-burger"),
+                0
+              );
+      
+              // Add a click event on each of them
+              $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                  // Get the target from the "data-target" attribute
+                  const target = el.dataset.target;
+                  const $target = document.getElementById(target);
+      
+                  // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                  el.classList.toggle("is-active");
+                  $target.classList.toggle("is-active");
+                });
+              });
+            });
+          </script>
     </body>
 
 </html>

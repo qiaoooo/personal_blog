@@ -18,16 +18,30 @@
 
   <body>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
           <a href="./index.html" class="navbar-item"> Home </a>
-          <a href="./blog.html" class="navbar-item"> Blogs </a>
+          <a href="./views/blog.html" class="navbar-item"> Blogs </a>
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a href="./subscribe.html" class="button is-primary">
+              <a href="./views/subscribe.html" class="button is-primary">
                 <strong>Subscribe</strong>
               </a>
             </div>
@@ -58,23 +72,11 @@
           >
         </div>
         <div class="about-img">
-          <img src="images/about.jpg" alt="Your Image" />
+          <figure>
+            <img src="images/about.jpg" alt="Your Image" />
+            <figcaption>About Me</figcaption>
+          </figure>
         </div>
-      </div>
-      <div class="social-media-links">
-        <a href="https://www.linkedin.com/feed/" target="_blank"
-          ><img
-            src="images/linkedin logo.png"
-            class="social-media"
-            alt="linkedin-logo"
-        /></a>
-        <a href="#"
-          ><img
-            src="images/twitter logo.png"
-            target="_blank"
-            class="social-media"
-            alt="twitter-logo"
-        /></a>
       </div>
     </div>
 
@@ -83,5 +85,28 @@
         <span>&copy; Qiao 2023</span>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

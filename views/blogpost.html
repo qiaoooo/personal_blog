@@ -13,16 +13,28 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/blogpost.css" />
-
+    <link rel="stylesheet" href="../css/index.css" />
   </head>
 
   <body>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a href="./index.html" class="navbar-item"> Home </a>
+          <a href="../index.html" class="navbar-item"> Home </a>
           <a href="./blog.html" class="navbar-item"> Blogs </a>
         </div>
 
@@ -42,34 +54,69 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title">How I made a picture search engine</h1>
-          <h2>A
-            <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">MINI BLOG 
+          <h2>
+            A
+            <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921"
+              >mini blog
             </q>
           </h2>
+          <h3>lets' get started!</h3>
         </div>
       </div>
     </section>
 
     <div class="container">
-      <section class="articles columns" >
+      <section class="articles columns">
         <div class="column is-2"></div>
         <div class="column is-8">
           <div class="card article">
             <div class="card-content">
               <div class="media">
                 <div class="media-center">
-                  <img
-                    src="https://res.cloudinary.com/ameo/image/upload/v1639144778/typocat_svbspx.png"
-                    class="author-image"
-                    alt="Placeholder image"
-                  />
+                  <figure>
+                    <img
+                      src="https://res.cloudinary.com/ameo/image/upload/v1639144778/typocat_svbspx.png"
+                      class="author-image"
+                      alt="Placeholder image"
+                    />
+                    <figcaption>Avatar</figcaption>
+                  </figure>
                 </div>
                 <div class="media-content has-text-centered">
                   <p class="title article-title">Sapien eget mi proin sed 🔱</p>
-                  <p class="subtitle is-6 article-subtitle">
-                    <a href="#">@Qiao</a> on March 14, 2023
-                    <p id="bio">I'm a Freelancer. I love Programming</p>
-                  </p>
+                  <div class="bio">
+                    <h5>Author info</h5>
+                    <p>Name: Qiao</p>
+                    <p>title: Software Engineer</p>
+                    <p>Current company: none</p>
+                    <p>Short Bio: I'm a Freelancer. I love Programming</p>
+                    <p class="subtitle is-6 article-subtitle">
+                      <a href="#">@Qiao</a> on March 14, 2023
+                    </p>
+                    <br />
+                    <div class="bio-social">
+                      <a href="#"
+                        ><img
+                          src="../images/facebook logo.png"
+                          target="_blank"
+                          class="social-media"
+                          alt="facebook-logo"
+                      /></a>
+                      <a href="https://www.linkedin.com/feed/" target="_blank"
+                        ><img
+                          src="../images/linkedin logo.png"
+                          class="social-media"
+                          alt="linkedin-logo"
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="../images/twitter logo.png"
+                          target="_blank"
+                          class="social-media"
+                          alt="twitter-logo"
+                      /></a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="content article-body">
@@ -118,4 +165,27 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll(".navbar-burger"),
+        0
+      );
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach((el) => {
+        el.addEventListener("click", () => {
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle("is-active");
+          $target.classList.toggle("is-active");
+        });
+      });
+    });
+  </script>
 </html>

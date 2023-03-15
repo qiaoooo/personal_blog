@@ -1,6 +1,6 @@
-@import "./blog";
-@import "./subscribe";
-@import "./blogpost";
+@import "./blog.css";
+@import "./subscribe.css";
+@import "./blogpost.css";
 
 * {
   padding: 0%;
@@ -10,11 +10,6 @@
 
 html {
   background: #101010;
-}
-
-#navbarBasicExample {
-  display: flex;
-  justify-content: flex-start;
 }
 
 #about-content {

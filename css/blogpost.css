@@ -1,9 +1,56 @@
-#bio {
-  text-decoration: #332211 underline wavy;
+.bio p {
+  text-decoration: lightblue underline wavy;
   font-style: italic;
+  font-weight: bold;
+}
+
+.bio-social {
+  background-color: lightblue;
+  border-radius: 50%;
+  border-style: dashed;
+  border: 1px solid darkblue;
+}
+
+.container.has-text-centered h1 {
+  font-size: 50px;
+  font-style: oblique;
+  text-align: unset;
+}
+
+.container.has-text-centered h2 {
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+}
+
+.container.has-text-centered h3 {
+  font-size: 20px;
+  font-style: oblique;
+  font-stretch: condensed;
+  color: aqua;
 }
 
 q {
   font-weight: bold;
   font-size: 30px;
+  text-transform: capitalize;
+  text-emphasis: filled double-circle #ffb703;
+}
+
+.content.article-body p {
+  background-color: rgb(227, 240, 229);
+  font-size: small;
+  text-align: left;
+}
+
+.content.article-body a {
+  background-color: beige;
+  font-size: small;
+  text-decoration: blue underline dotted;
+}
+
+.content.article-body a:hover {
+  background-color: beige;
+  font-size: medium;
+  text-transform: uppercase;
 }

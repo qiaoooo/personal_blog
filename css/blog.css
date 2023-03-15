@@ -181,3 +181,12 @@ button:hover .index {
 .button {
   text-align: center;
 }
+
+figure {
+  display: table;
+  margin: 0px;
+}
+figcaption {
+  display: table-caption;
+  caption-side: top;
+}
