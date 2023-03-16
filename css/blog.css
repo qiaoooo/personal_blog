@@ -2,7 +2,7 @@
   background: #101010;
   display: grid;
   color: whitesmoke;
-  width: 100%;
+  padding: 10%;
   height: auto;
   grid-template-rows: 1fr, 2fr;
 }
@@ -16,17 +16,16 @@
   font-size: 45px;
   font-family: poppins;
   color: whitesmoke;
-  padding: 10px;
-  padding-bottom: 30px;
-  padding-top: 60px;
+  padding: 10%;
+  padding-bottom: 20%;
+  padding-top: 20%;
   font-weight: 900;
 }
 
 .header-caption {
   opacity: 0.8;
   display: block;
-  font-size: 20px;
-  font-family: raleway;
+  font-size: medium;
   padding: 8px;
   padding-top: 15px;
   color: whitesmoke;
@@ -56,7 +55,7 @@ figcaption {
   font-size: 18px;
   text-align: center;
   font-weight: 400;
-  padding: 3px;
+  padding: 5%;
   transition: all 0.4s ease;
   width: 25%;
   height: auto;
@@ -82,8 +81,8 @@ figcaption {
   color: #c70039;
   transition: all 0.4s ease;
   outline: none;
-  margin: 20px;
-  border: 1.5px solid #c70039;
+  margin: 10%;
+  border: 0.1rem solid #c70039;
   cursor: pointer;
   overflow: hidden;
   position: relative;
